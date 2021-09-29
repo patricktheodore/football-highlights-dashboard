@@ -1,6 +1,8 @@
 an app that allows the user to search for a football team and watch highlights of recent games. 
 
-user story: 
+
+
+USER STORY: 
 
 AS A football fan
 
@@ -9,7 +11,9 @@ I WANT to see highlights from games played recently for different teams
 SO THAT I can keep up to date with games played in other countries. 
 
 
-Acceptance Criteria:
+
+
+ACCEPTANCE CRITERIA:
 
 GIVEN a dashboard with clickable 'league' buttons
 
@@ -28,3 +32,11 @@ THEN I am taken to a highlights video for that game, and the other games are dis
 WHEN I click, on another game
 
 THEN I am taken to the corresponding highlights video for that game
+
+
+
+WHEN PAGE LOADS, PROMTED FOR USER NAME AND FAVORITE TEAM. 
+
+THEN users favourite team and league will be pushed to the top. 
+
+OPTION to skip this and have a default view load. 
