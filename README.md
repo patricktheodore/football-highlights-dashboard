@@ -52,3 +52,31 @@ JS - jquery,
 API - football (soccer) videos, football standings, football-data
 
 LOCAL STORAGE - will store users favourite teams, leagues and players. 
+
+
+MVP - 
+
+user chooses team - stored in local storage
+
+understanding the limits of the API 
+
+make somrething small that work and then continue
+
+
+
+
+fetch("https://api.football-data.org/v2/competitions/6672/teams", {
+    headers: {
+        'X-Auth-Token': "d9a5e68af1764fc0acc74a34bc2ebb48"
+    },
+})
+.then(function(response) {
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  return response.json();
+})
+.then(function(data) {
+  // DO THINGS WITH TEH DATA
+});
+
