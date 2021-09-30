@@ -40,3 +40,15 @@ WHEN PAGE LOADS, PROMTED FOR USER NAME AND FAVORITE TEAM.
 THEN users favourite team and league will be pushed to the top. 
 
 OPTION to skip this and have a default view load. 
+
+PSUEDO CODE: 
+
+HTML FILES - landing page with form, display dash with games and results, video page, stats page
+
+CSS - FRAMEWORK - font awesome, google fonts
+
+JS - jquery, 
+
+API - football (soccer) videos, football standings, football-data
+
+LOCAL STORAGE - will store users favourite teams, leagues and players. 
