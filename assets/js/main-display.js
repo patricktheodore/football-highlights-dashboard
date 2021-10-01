@@ -1,7 +1,8 @@
 const teamNameEl = $('#team-name');
 const gameContainerDiv = $('#game-container');
 
-let teamName = "Juventus" //localStorage.getItem('team'); //need to edit team name by dropping FC off the end. 
+let userTeamName = localStorage.getItem('team'); //need to edit team name by dropping FC off the end. 
+let teamName = userTeamName.replace(" FC", "");
 
 console.log(teamName);
 teamNameEl.text(teamName + "'s Recent Games.");
