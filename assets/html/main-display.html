@@ -20,21 +20,19 @@
     <!-- display users favourites teams last 3 games -->
 
     <!-- get team from local storage and display in a h3 above a list-->
-    <h3>Chelsea</h3>
+    <h3 id="team-name"></h3>
 
-    <!-- list with teams recent games, dynamically updated using js -->
-    <ul>
-        <li>
-            <button>Chelsea vs Manchester City</button>
-        </li>
-        <li>
-            <button>Chelsea vs Aston Villa</button>
-        </li>
-    </ul>
+    <div id="game-container"></div>
+
 
     <!-- footer -->
+
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" 
         integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" 
         crossorigin="anonymous"></script> <!--foundation css framework js cdn-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!--jQuery cdn-->
+    <script src="../js/main-display.js"></script>
 </body>
 </html>
