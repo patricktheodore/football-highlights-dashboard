@@ -39,28 +39,11 @@ $(document).ready(function(){
 teamSelectBtn.on('click', function(event) {
     event.preventDefault();
     if (!selectedTeam) {
-        fireModal();
+        $('#open-button').trigger('click');
     } else { 
         localStorage.setItem('team', selectedTeam);
         document.location = "file:///Users/patricksara/Desktop/BootCamp/football-highlights-dashboard/assets/html/main-display.html"
     }
 });
 
-function fireModal() {
-    $('#open-button').trigger('click');
-}
-
 $(document).foundation();
-
-
-
-
-
-//$(window).on('load', getTeams);
-
-
-
-
-//add listener to change 
-
-//take the value of the option and save it to local storage when button is pressed. 
