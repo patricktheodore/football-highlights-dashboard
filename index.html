@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
         integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
     <!--foundation css framework cdn-->
+    <link rel="stylesheet" href="./assets/css/style.css">
 
     <title>football-hub</title>
 </head>
@@ -33,6 +34,18 @@
         </select>
         <button id="team-select-btn">load my team</button>
     </form>
+
+    <div class="row"> <!--foundation modal-->
+        <div class="columns">
+        <div class="reveal" id="exampleModal11" aria-labelledby="exampleModalHeader11" data-reveal>
+            <p id="open-modal"></p><button class="button" data-open="exampleModal11" id="open-button"></button></p>
+            <p id="exampleModalHeader11">please select a team from the list.</p>
+          <button class="close-button" data-close aria-label="Close Accessible Modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        </div>
+    </div>
     <!-- header -->
 
     <!--changes to html branch-->
@@ -52,13 +65,14 @@ submit button - changle location to main display
 
 
     <!-- footer -->
+
     
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
-        integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
-    <!--foundation css framework js cdn-->
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <!--jQuery cdn-->
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
+        integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+    <!--foundation css framework js cdn-->
     <script src="./assets/js/script.js"></script>
 </body>
 

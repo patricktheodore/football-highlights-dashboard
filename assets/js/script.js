@@ -38,14 +38,19 @@ $(document).ready(function(){
 
 teamSelectBtn.on('click', function(event) {
     event.preventDefault();
-    if (selectedTeam === "") {
-        alert("please select a team")//insert foundation modal
+    if (!selectedTeam) {
+        fireModal();
     } else { 
         localStorage.setItem('team', selectedTeam);
         document.location = "file:///Users/patricksara/Desktop/BootCamp/football-highlights-dashboard/assets/html/main-display.html"
     }
 });
 
+function fireModal() {
+    $('#open-button').trigger('click');
+}
+
+$(document).foundation();
 
 
 
