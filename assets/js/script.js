@@ -38,24 +38,12 @@ $(document).ready(function(){
 
 teamSelectBtn.on('click', function(event) {
     event.preventDefault();
-    if (selectedTeam === "") {
-        alert("please select a team")//insert foundation modal
+    if (!selectedTeam) {
+        $('#open-button').trigger('click');
     } else { 
         localStorage.setItem('team', selectedTeam);
         document.location = "file:///Users/patricksara/Desktop/BootCamp/football-highlights-dashboard/assets/html/main-display.html"
     }
 });
 
-
-
-
-
-
-//$(window).on('load', getTeams);
-
-
-
-
-//add listener to change 
-
-//take the value of the option and save it to local storage when button is pressed. 
+$(document).foundation();
