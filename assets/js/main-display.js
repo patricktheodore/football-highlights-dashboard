@@ -89,11 +89,11 @@ function getStandings() {
                 //td with team name
                 const teamName = $('<td>').text(data.standings[0].table[i].team.name).attr({class:"team-name"});
                 //td with games won
-                const teamWins = $('<td>').text(data.standings[0].table[i].won).attr({class:"wins"});
+                const teamWins = $('<td>').text(data.standings[0].table[i].won + " W").attr({class:"wins"});
                 //td with games drawn
-                const teamDraws = $('<td>').text(data.standings[0].table[i].draw).attr({class:"draws"});
+                const teamDraws = $('<td>').text(data.standings[0].table[i].draw + " D").attr({class:"draws"});
                 //td with games lost
-                const teamLosses = $('<td>').text(data.standings[0].table[i].lost).attr({class:"losses"});
+                const teamLosses = $('<td>').text(data.standings[0].table[i].lost + " L").attr({class:"losses"});
                 //td with games played
                 const teamPlayedGames = $('<td>').text(data.standings[0].table[i].playedGames);
                 //td with goals for
