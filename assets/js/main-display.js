@@ -1,6 +1,7 @@
 const teamNameEl = $('#team-name');
 const gameContainerDiv = $('#game-container');
 const leagueTableContainer = $('.league-table');
+let teamID;
 
 let userTeamName = localStorage.getItem('team'); //need to edit team name by dropping FC off the end. 
 let teamName = userTeamName.replace(" FC", "");
@@ -21,8 +22,6 @@ function getHighlights() {
         })
         .then(function (data) {
             console.log(data);
-            console.log(data.response[0].title);
-            console.log(data.response[0].matchviewUrl);
             
             //search data for teamName
             for (let i = 0; i < data.response.length; i++) {
@@ -57,6 +56,7 @@ function getHighlights() {
 
 $(document).ready(function(){
     getHighlights();
+    getStandings();
 });
 
 function getStandings() {
@@ -74,8 +74,12 @@ function getStandings() {
         .then(function (data) {
             console.log(data);
 
+
+
             //run a for loop on array length
             for (let i = 0; i < data.standings[0].table.length; i++) {
+
+
                 //create a table
                 const table = $('<table>');
                 //create a table row
@@ -126,4 +130,21 @@ function getStandings() {
         });
 }
 
-getStandings();
+function getFixtures() {
+    fetch(`http://api.football-data.org/v2/teams/61/matches?status=SCHEDULED&limit=3`, {
+        headers: {
+            'X-Auth-Token': "d9a5e68af1764fc0acc74a34bc2ebb48"
+        },
+    })
+        .then(function (response) {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+        });
+}
+
+getFixtures();
