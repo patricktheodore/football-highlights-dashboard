@@ -1,24 +1,126 @@
 :root {
-    --dark: #333;
-    --light: #ccc;
+
+    --dark: #38003d;
+    --light: #ffffff;
+    --secondary: #d9d9d9;
+    --primary: #999999;
 }
-body {
+html, body {
+    background-color: var(--light);
+    background-image: url(/assets/images/background-image.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-size: 16;
     box-sizing: border-box;
+    max-width: 100%;
+    margin: auto;
+    padding: 0;
+}
+h1, h2, h3{
+    text-align: center;
+}
+header {
     display: flex;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark);
+    height: 5rem;
+    width: 100%;
+}
+header h1, a{
+    font-size: 2.5rem;
+    margin: auto;
+    font-weight: 3re;
+    text-decoration: none;
+    color: var(--light);
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+}
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar li a {
+    color: var(--light);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: lighter;
+    padding: 0 1.5rem;
+}
+.navbar li a:hover,
+header h1 a:hover,
+.socials a:hover {
+    color: var(--primary);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--light);
+    font-size: 1rem;
 }
 
+.socials a {
+    color: var(--light);
+    text-decoration: none;
+    font-weight: lighter;
+    padding: 0 1rem;
+    margin-right: 1%; 
+}
+.socials a:hover {
+    cursor: pointer;
+}
+button {
+    background-color: var(--dark);
+    color: var(--light);
+    cursor: pointer;
+    border: 0.5px solid;
+    outline: none;
+    border-radius: 8px; 
+}
+.text-input:hover {
+    box-shadow: 0 0 5px #999;
+}
+button:hover {
+    background-color: var(--light);
+    color: var(--dark);
+}
+.form-group{
+    position: relative;
+    text-align: center;
+}
 
-
-
-
-
-
-
-/*custom styling*/
-
+footer {
+    margin-top: 40%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--dark);
+    color: var(--light);
+    height: 4rem;
+}
+footer a {
+    text-decoration: none;
+    color: var(--light);
+    padding: 0 2rem;
+    margin: auto;
+}
+footer a:hover {
+    color: var(--secondary);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+  
 #open-button {
     display: none;
 }

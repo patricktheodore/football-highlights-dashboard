@@ -5,37 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
-        integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
-    <!--foundation css framework cdn-->
-    <link rel="stylesheet" href="./assets/css/style.css">
 
-    <title>football-hub</title>
-</head>
+    <title>Football Highlights Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/assets/css/style.css" </head>
 
 <body>
-
-    <header id="header">
-        <h1><a href=#home>Football Highlights Dashboard</a></h1>
+    <header>
+        <h1><a href=#home>Football Highlights</a></h1>
         <nav>
-            <ul class="quick-links">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Features</a></li>
+            <ul class="navbar">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Featured</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
             <div class="socials">
+                <a class="fab fa-github fa-2x" title="github"
+                    href="https://github.com/patricktheodore/football-highlights-dashboard/" target="_blank"></a>
                 <a class="fab fa-facebook fa-2x" title="facebook" href="#" target="_blank"></a>
+                <a class="fab fa-youtube fa-2x" title="youtube" href="#" target="_blank"></a>
             </div>
+        </nav>
     </header>
-    <form>
-        <label>English Premier League </label>
-        <select id="team-select">
-            <option value="">select team</option>
-        </select>
-        <button id="team-select-btn">load my team</button>
-    </form>
-
-    <div class="row"> <!--foundation modal-->
+    <div id="container">
+        <h2>English Premier League </h2>
+        <form id="select-form">
+            <div class="form-group">
+                <select id="team-select">
+                    <option value="">Select Team</option>
+                </select>
+                <button id="team-select-btn">Load My Team</button>
+            </div>
+        </form>
+      
+          <div class="row"> <!--foundation modal-->
         <div class="columns">
         <div class="reveal" id="exampleModal11" aria-labelledby="exampleModalHeader11" data-reveal>
             <p id="open-modal"></p><button class="button" data-open="exampleModal11" id="open-button"></button></p>
@@ -46,34 +51,20 @@
         </div>
         </div>
     </div>
-    <!-- header -->
-
-    <!--changes to html branch-->
-
-    <!-- form 
-    
-    name
-
-    dropdown list with league, gotten from api
-
-    then another dropdown with teams from that league
-
-
-submit button - changle location to main display
-
-    -->
-
-
-    <!-- footer -->
-
-    
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
+  
+    </div>
+    <footer id="footer">
+        <h3 href="#">&copy; Football Highlights Dashboard</h3>
+    </footer>
+  
+      <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <!--jQuery cdn-->
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
         integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
     <!--foundation css framework js cdn-->
     <script src="./assets/js/script.js"></script>
+
 </body>
 
 </html>
