@@ -1,6 +1,10 @@
 const teamNameEl = $('#team-name');
 const gameContainerDiv = $('#game-container');
+const fixturesContainerDiv = $('.fixtures-table');
 const leagueTableContainer = $('.league-table');
+const dateToday = moment().format('YYYY-MM-DD');
+
+let teamID = '';
 
 let userTeamName = localStorage.getItem('team'); //need to edit team name by dropping FC off the end. 
 let teamName = userTeamName.replace(" FC", "");
@@ -20,9 +24,6 @@ function getHighlights() {
             return response.json();
         })
         .then(function (data) {
-            console.log(data);
-            console.log(data.response[0].title);
-            console.log(data.response[0].matchviewUrl);
             
             //search data for teamName
             for (let i = 0; i < data.response.length; i++) {
@@ -57,6 +58,7 @@ function getHighlights() {
 
 $(document).ready(function(){
     getHighlights();
+    getStandings();
 });
 
 function getStandings() {
@@ -72,12 +74,18 @@ function getStandings() {
             return response.json();
         })
         .then(function (data) {
+
             console.log(data);
 
             //run a for loop on array length
             for (let i = 0; i < data.standings[0].table.length; i++) {
-                //create a table
-                const table = $('<table>');
+
+                //set teamID to teams id in array. 
+                if (data.standings[0].table[i].team.name === userTeamName) {
+                    teamID = data.standings[0].table[i].team.id;
+                    getFixtures(teamID); 
+                }
+
                 //create a table row
                 const tableRow = $('<tr>');
                 //td with position
@@ -106,7 +114,6 @@ function getStandings() {
                 const teamPoints = $('<td>').text(data.standings[0].table[i].points).attr({class:"points"});
 
                 leagueTableContainer.append(
-                    table.append(
                         tableRow.append(
                             teamPos, 
                             teamCrestContainer.append(teamCrestImg),
@@ -119,11 +126,41 @@ function getStandings() {
                             teamGoalsAgainst,
                             teamGoalsDiff,
                             teamPoints
-                        )
                     )
                 );
             }
         });
 }
 
-getStandings();
+function getFixtures() {
+    fetch(`http://api.football-data.org/v2/teams/${teamID}/matches?status=SCHEDULED&dateFROM=${dateToday}`, {
+        headers: {
+            'X-Auth-Token': "d9a5e68af1764fc0acc74a34bc2ebb48"
+        },
+    })
+        .then(function (response) {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+            for (let i = 0; i < 3; i++) {
+                const tableRow = $('<tr>');
+                const competition = $('<td>').text(data.matches[i].competition.name);
+                const homeTeam = $('<td>').text(data.matches[i].homeTeam.name);
+                const vsEl = $('<td>').text(' vs ');
+                const awayTeam = $('<td>').text(data.matches[i].awayTeam.name)
+
+                fixturesContainerDiv.append(
+                    tableRow.append(
+                        competition,
+                        homeTeam,
+                        vsEl,
+                        awayTeam
+                    )
+                );               
+            }          
+        });
+};
