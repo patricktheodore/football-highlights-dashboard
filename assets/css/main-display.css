@@ -1,0 +1,32 @@
+.team-crest-img {
+    height: 2rem;
+}
+
+td {
+    display: inline-block;
+    text-align: left;
+    margin: 0 0.5rem;
+}
+
+.team-name {
+    width: 250px;
+}
+
+.wins {
+    background-color: rgb(28, 192, 28);
+    padding: 0 0.5rem;
+}
+
+.draws {
+    background-color: rgb(255, 217, 0);
+    padding: 0 0.5rem;
+}
+
+.losses {
+    background-color: rgb(231, 104, 82);
+    padding: 0 0.5rem;
+}
+
+.points {
+    background-color: turquoise;
+}
