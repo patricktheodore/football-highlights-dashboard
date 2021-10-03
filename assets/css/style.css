@@ -1,5 +1,4 @@
 :root {
-
     --dark: #38003d;
     --light: #ffffff;
     --secondary: #d9d9d9;
@@ -7,7 +6,7 @@
 }
 html, body {
     background-color: var(--light);
-    background-image: url(/assets/images/background-image.jpg);
+    background-image: url(assets/images/background-image.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     font-size: 16;
@@ -120,6 +119,7 @@ footer a:hover {
     color: var(--secondary);
     transform: translateY(-0.1rem);
     transition: transform 150ms;
+}
   
 #open-button {
     display: none;
