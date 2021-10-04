@@ -1,12 +1,26 @@
+:root {
+    --dark: #38003d;
+    --light: #ffffff;
+    --secondary: #d9d9d9;
+    --primary: #999999;
+}
+html, body {
+    font-size: 16;
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: auto;
+    padding: 0;
+}
+
+td {
+    padding: 0.5rem 0;
+}
+
 .team-crest-img {
     height: 1.5rem;
     width: 1.5rem;
     text-align: center;
     margin: 0 0.5rem;
-}
-
-.team-name {
-    width: fit-content;
 }
 
 .wins {
@@ -22,10 +36,6 @@
 .losses {
     background-color: rgb(231, 104, 82);
     padding: 0 0.5rem;
-}
-
-.points {
-    background-color: turquoise;
 }
 
 .teamForm {
@@ -45,4 +55,34 @@ tr {
 .league-icon {
     width: 2.5rem;
 }
+
+.league-table-container,
+.fixtures-container {
+    width: 60%;
+}
+
+table tr td,
+table thead tr th {
+    text-align: center;
+}
+
+.team-name {
+    text-align: start;
+}
+
+.competition-tag,
+.th-comp {
+    text-align: start;
+}
+
+.home-team-tag,
+.th-home {
+    text-align: right;
+}
+
+.away-team-tag,
+.th-away {
+    text-align: left;
+}
+
 

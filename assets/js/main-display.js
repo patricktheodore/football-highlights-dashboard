@@ -1,16 +1,10 @@
-const teamNameEl = $('#team-name');
 const gameContainerDiv = $('#game-container');
-const fixturesContainerDiv = $('.fixtures-table');
+const fixturesContainerDiv = $('.fixtures-table-head');
 const leagueTableContainer = $('.league-table');
 const dateToday = moment().format('YYYY-MM-DD');
 
-
-
 let userTeamName = localStorage.getItem('team'); //need to edit team name by dropping FC off the end. 
 let teamName = userTeamName.replace(" FC", "");
-
-console.log(teamName);
-teamNameEl.text(teamName + "'s Recent Games.");
 
 //get team name from local storage
 //display it as the title of the page
@@ -189,12 +183,12 @@ function getFixtures(teamID) {
             for (let i = 0; i < 3; i++) {
                 const match = data.matches[i]
                 const tableRow = $('<tr>');
-                const competition = $('<td>').text(match.competition.name);
+                const competition = $('<td>').text(match.competition.name).attr({class:"competition-tag"});
                 const homeTeamIcon = await getTeamLogo(match.homeTeam.id);
                 const awayTeamIcon = await getTeamLogo(match.awayTeam.id);
 
-                const homeTeam = createHomeTeam(match.homeTeam.name, homeTeamIcon);
-                const awayTeam = createAwayTeam(match.awayTeam.name, awayTeamIcon);
+                const homeTeam = createHomeTeam(match.homeTeam.name, homeTeamIcon).attr({class:"home-team-tag"});
+                const awayTeam = createAwayTeam(match.awayTeam.name, awayTeamIcon).attr({class:"away-team-tag"});
 
                 const vsEl = $('<td>').text(' vs ');
 
