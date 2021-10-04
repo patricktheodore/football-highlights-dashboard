@@ -37,9 +37,9 @@ function getHighlights() {
                     //create a h3 with text(title)
                     const gameTitle = $('<h3>').text(data.response[i].title);
                     //create a ul
-                    const gameTitleList = $('<ul>');
+                    const gameTitleList = $('<div>');
                     //create a li
-                    const gameTitleItem = $('<li>');
+                    const gameTitleItem = $('<div>');
                     //create a button with text(highlights) and href matchviewURL
 
                     gameContainerDiv.append(
@@ -52,14 +52,12 @@ function getHighlights() {
                     );
 
                     const highlightVideos = getHighlightVideo(data.response[i].videos);
-
-
-                    if (highlightVideos.length === 1) {
-                        const videoContainer = document.createElement('div');
-                        videoContainer.setAttribute('style', 'width: 400px');
-                        videoContainer.innerHTML = highlightVideos[0].embed;
-                        gameTitleList.append(videoContainer);
-                    }
+                     
+                    const videoContainer = document.createElement('div');
+                    videoContainer.setAttribute('style', 'width: 400px');
+                    videoContainer.innerHTML = highlightVideos[0].embed;
+                    gameTitleList.append(videoContainer);
+                    
                 }
             }
         }
