@@ -33,9 +33,9 @@ function getHighlights() {
                 if (data.response[i].title.includes(teamName)) {
 
                     //create a div
-                    const gameDiv = $('<div>').attr({class: "cell small-12"});
+                    const gameDiv = $('<div>').attr({ class: "cell small-12" });
                     //create a h3 with text(title)
-                    const gameTitle = $('<a>').text(data.response[i].title).attr({id: 'game-title'});
+                    const gameTitle = $('<a>').text(data.response[i].title).attr({ id: 'game-title' });
                     //create a div
                     const gameTitleItem = $('<div>');
                     //create a button with text(highlights) and href matchviewURL
@@ -43,22 +43,21 @@ function getHighlights() {
                     gameContainerDiv.append(
                         gameDiv.append(
                             gameTitle,
-                                gameTitleItem
+                            gameTitleItem
                         )
                     );
 
                     const highlightVideos = getHighlightVideo(data.response[i].videos);
-                     
+
                     const videoContainer = document.createElement('div');
                     videoContainer.setAttribute('style', 'width: 100%');
                     videoContainer.setAttribute('style', 'display: none');
                     videoContainer.innerHTML = highlightVideos[0].embed;
                     gameTitleItem.append(videoContainer);
-                    
-                    $('#game-title').on('click', function(event){
-                        event.preventDefault();
-                        videoContainer.setAttribute('style', 'display: inline');
 
+                    $('#game-title').on('click', function (event) {
+                        event.preventDefault();
+                        $(this).sibling(0).children(0).setAttribute('style', 'display: inline');
                     })
                 }
             }
@@ -183,14 +182,14 @@ function getFixtures(teamID) {
             for (let i = 0; i < 3; i++) {
                 const match = data.matches[i]
                 const tableRow = $('<tr>');
-                const competition = $('<p>').text(match.competition.name).attr({class:"competition-tag"});
+                const competition = $('<p>').text(match.competition.name).attr({ class: "competition-tag" });
                 const homeTeamIcon = await getTeamLogo(match.homeTeam.id);
                 const awayTeamIcon = await getTeamLogo(match.awayTeam.id);
 
-                const homeTeam = createHomeTeam(match.homeTeam.name, homeTeamIcon).attr({class:"home-team-tag"});
-                const awayTeam = createAwayTeam(match.awayTeam.name, awayTeamIcon).attr({class:"away-team-tag"});
+                const homeTeam = createHomeTeam(match.homeTeam.name, homeTeamIcon).attr({ class: "home-team-tag" });
+                const awayTeam = createAwayTeam(match.awayTeam.name, awayTeamIcon).attr({ class: "away-team-tag" });
 
-                const vsEl = $('<td>').text(' vs ').attr({class:'vs-tag'});
+                const vsEl = $('<td>').text(' vs ').attr({ class: 'vs-tag' });
 
                 fixturesContainerDiv.append(
                     tableRow.append(
