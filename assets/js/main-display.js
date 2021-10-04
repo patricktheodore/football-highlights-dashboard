@@ -144,24 +144,32 @@ function getStandings() {
         });
 }
 
-function getTeamLogo(teamID){
+function getTeamLogo(teamID) {
     return fetch(`http://api.football-data.org/v2/teams/${teamID}`, {
         headers: {
             'X-Auth-Token': "d9a5e68af1764fc0acc74a34bc2ebb48"
         },
     })
-    .then((response) => response.json())
-    .then(function (result){
-        return result.crestUrl
-    })
+        .then((response) => response.json())
+        .then(function (result) {
+            return result.crestUrl
+        })
 }
 
-function createTeamName(name, icon){
+function createHomeTeam(name, icon) {
     const iconImg = $("<img>")
-    iconImg.attr({src: icon, class: "team-crest-img"})
-    const team = $('<td>').text(name);
-    team.append(iconImg)
-    return team
+    iconImg.attr({ src: icon, class: "team-crest-img" })
+    const teamHome = $('<td>').text(name);
+    teamHome.append(iconImg)
+    return teamHome
+}
+
+function createAwayTeam(name, icon) {
+    const iconImg = $("<img>")
+    iconImg.attr({ src: icon, class: "team-crest-img" })
+    const teamAway = $('<td>').text(name);
+    teamAway.prepend(iconImg)
+    return teamAway
 }
 
 function getFixtures(teamID) {
@@ -185,8 +193,8 @@ function getFixtures(teamID) {
                 const homeTeamIcon = await getTeamLogo(match.homeTeam.id);
                 const awayTeamIcon = await getTeamLogo(match.awayTeam.id);
 
-                const homeTeam = createTeamName(match.homeTeam.name, homeTeamIcon);
-                const awayTeam = createTeamName(match.awayTeam.name, awayTeamIcon);
+                const homeTeam = createHomeTeam(match.homeTeam.name, homeTeamIcon);
+                const awayTeam = createAwayTeam(match.awayTeam.name, awayTeamIcon);
 
                 const vsEl = $('<td>').text(' vs ');
 
