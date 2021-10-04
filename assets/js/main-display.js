@@ -96,18 +96,16 @@ function getStandings() {
                 const teamCrestImg = $('<img>').attr({src:data.standings[0].table[i].team.crestUrl, class:"team-crest-img"});
                 //td with team name
                 const teamName = $('<td>').text(data.standings[0].table[i].team.name).attr({class:"team-name"});
-                //td with games won
-                const teamWins = $('<td>').text(data.standings[0].table[i].won + " W").attr({class:"wins"});
+                //span with team form
+                const teamForm = $('<span>').attr({class:"teamForm"});
+                //p with games won
+                const teamWins = $('<span>').text(data.standings[0].table[i].won).attr({class:"wins"});
                 //td with games drawn
-                const teamDraws = $('<td>').text(data.standings[0].table[i].draw + " D").attr({class:"draws"});
+                const teamDraws = $('<span>').text(data.standings[0].table[i].draw).attr({class:"draws"});
                 //td with games lost
-                const teamLosses = $('<td>').text(data.standings[0].table[i].lost + " L").attr({class:"losses"});
+                const teamLosses = $('<span>').text(data.standings[0].table[i].lost).attr({class:"losses"});
                 //td with games played
                 const teamPlayedGames = $('<td>').text(data.standings[0].table[i].playedGames);
-                //td with goals for
-                const teamGoalsFor = $('<td>').text(data.standings[0].table[i].goalsFor);
-                //td goals against
-                const teamGoalsAgainst = $('<td>').text(data.standings[0].table[i].goalsAgainst);
                 //td goals diff
                 const teamGoalsDiff = $('<td>').text(data.standings[0].table[i].goalDifference);
                 //td team points
@@ -117,13 +115,11 @@ function getStandings() {
                         tableRow.append(
                             teamPos, 
                             teamCrestContainer.append(teamCrestImg),
-                            teamName,
+                            teamName.append(teamForm.append(
                             teamWins,
                             teamDraws,
-                            teamLosses,
+                            teamLosses)),
                             teamPlayedGames,
-                            teamGoalsFor,
-                            teamGoalsAgainst,
                             teamGoalsDiff,
                             teamPoints
                     )

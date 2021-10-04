@@ -30,3 +30,8 @@ td {
 .points {
     background-color: turquoise;
 }
+
+.teamForm {
+    font-size: 0.75rem;
+    margin-left: 1rem;
+}
