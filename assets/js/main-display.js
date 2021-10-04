@@ -105,9 +105,9 @@ function getStandings() {
                 //create a table row
                 const tableRow = $('<tr>');
                 //td with position
-                const teamPos = $('<td>').text(data.standings[0].table[i].position);
+                const teamPos = $('<td>').text(data.standings[0].table[i].position).attr({ class: "league-pos" });
                 //td for team crest image
-                const teamCrestContainer = $('<td>');
+                const teamCrestContainer = $('<td>').attr({ class: "league-icon" });
                 //img with src of crest url
                 const teamCrestImg = $('<img>').attr({ src: data.standings[0].table[i].team.crestUrl, class: "team-crest-img" });
                 //td with team name

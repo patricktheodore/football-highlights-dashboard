@@ -1,16 +1,12 @@
 .team-crest-img {
     height: 1.5rem;
-    margin: 0 0.5rem;
-}
-
-td {
-    display: inline-block;
-    text-align: left;
+    width: 1.5rem;
+    text-align: center;
     margin: 0 0.5rem;
 }
 
 .team-name {
-    width: 250px;
+    width: fit-content;
 }
 
 .wins {
@@ -35,5 +31,18 @@ td {
 .teamForm {
     font-size: 0.75rem;
     margin-left: 1rem;
+}
+
+tr {
+    height: 1.5rem;
+}
+
+.league-pos {
+    width: 1rem;
+    text-align: center;
+}
+
+.league-icon {
+    width: 2.5rem;
 }
 
