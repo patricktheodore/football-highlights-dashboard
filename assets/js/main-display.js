@@ -15,6 +15,18 @@ function getHighlightVideo(videos) {
     })
 }
 
+//use other api to display score, and loop through array to find highlights using the away team as key with this api. 
+
+//displaying team name is not needed, re use icon function from below for teams. 
+
+//try and not use async function sam wrote. 
+
+//store icons on page load??? get id and icon url at the same time
+
+//use fetch(`http://api.football-data.org/v2/teams/${teamID}/matches?status=FINISHED`
+
+//if ((response.hometeam.name === userteams opponents || awayteam.name) && (response.awayteam.name === || ....) then load highlights
+
 
 
 function getHighlights() {
@@ -55,7 +67,7 @@ function getHighlights() {
                     videoContainer.innerHTML = highlightVideos[0].embed;
                     gameTitleItem.append(videoContainer);
 
-                    $('#game-title').on('click', function (event) {
+                    $('#game-title').on('click', function (event, ) {
                         event.preventDefault();
                         $(this).sibling(0).children(0).setAttribute('style', 'display: inline');
                     })
