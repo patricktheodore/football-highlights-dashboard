@@ -47,9 +47,9 @@ function getHighlights() {
                     //create a div
                     const gameDiv = $('<div>').attr({ class: "cell small-12 align-center" });
                     //create a h3 with text(title)
-                    const gameTitle = $('<button>').text(data.response[i].title).attr({ class: 'game-title' });
+                    const gameTitle = $('<button>').text(data.response[i].title).addClass('game-title' + i).attr('id', 'video-reveal-button');
                     //create a div
-                    const gameTitleItem = $('<div>').attr({ class: 'hlvideo' });
+                    const gameTitleItem = $('<div>');
                     //create a button with text(highlights) and href matchviewURL
 
                     gameContainerDiv.append(
@@ -67,7 +67,7 @@ function getHighlights() {
                     videoContainer.innerHTML = highlightVideos[0].embed;
                     gameTitleItem.append(videoContainer);
 
-                    $('.game-title').click(function() {
+                    $('.game-title' + i).click(function() {
                         $(videoContainer).toggle();
                       });
                 }
