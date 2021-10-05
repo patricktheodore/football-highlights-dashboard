@@ -5,16 +5,25 @@
     --primary: #999999;
 }
 html, body {
-    background-color: var(--light);
+    width: 100%;
+    min-height: 100vh;
     background-image: url(../images/background-image.jpg);
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
     font-size: 16;
     box-sizing: border-box;
     max-width: 100%;
-    margin: auto;
+    margin: 0;
     padding: 0;
 }
+.home-img {
+    position: absolute;
+    margin: auto;
+    padding: 0%;
+    height: 100%;
+    width: 100%;
+  }
 h1, h2, h3{
     text-align: center;
 }
@@ -72,6 +81,7 @@ header h1 a:hover,
 }
 
 .socials a {
+    display: flex;
     color: var(--light);
     text-decoration: none;
     font-weight: lighter;
@@ -87,7 +97,8 @@ button {
     cursor: pointer;
     border: 0.5px solid;
     outline: none;
-    border-radius: 8px; 
+    border-radius: 8px;
+    padding: 3.5px; 
 }
 .text-input:hover {
     box-shadow: 0 0 5px #999;
@@ -97,10 +108,10 @@ button:hover {
     color: var(--dark);
 }
 .form-group{
+    margin-top: 5rem;
     position: relative;
     text-align: center;
 }
-
 footer {
     margin-top: 40%;
     display: flex;
@@ -119,8 +130,18 @@ footer a:hover {
     color: var(--secondary);
     transform: translateY(-0.1rem);
     transition: transform 150ms;
-}
-  
+}  
 #open-button {
     display: none;
 }
+@media (max-width: 768px) {
+    header{
+        padding-bottom: 10%;
+    }
+    .navbar{
+        margin-left: 25%;
+    }
+    footer{
+        margin-top: 110%;
+    }
+  }

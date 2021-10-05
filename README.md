@@ -1,82 +1,43 @@
-an app that allows the user to search for a football team and watch highlights of recent games. 
+# Project 1 Task:
 
+With your team, you'll conceive and execute a design that solves a real-world problem by integrating data received from multiple server-side API requests. You will also learn about agile development methodologies to help you work collaboratively. You will implement feature and bug fixes using git branch workflow and pull requests.
+You will write your own user stories and acceptance criteria in GitHub Issues to help your team stay on track with the project. Using GitHub Project as a means to track the status of your project tasks will help you understand the benefits of Kanban boards.
+# Project 1 - Group 2(Patrick & Adam): Football Highlights Dashboard
 
+## User Story
 
-USER STORY: 
+```
+AS A English Primier League football lover
+I WANT to see my favorite team hightlights from games played recently
+SO THAT I SO THAT I can keep up to date with games played
+```
 
-AS A football fan
+## Acceptance Criteria
 
-I WANT to see highlights from games played recently for different teams
-
-SO THAT I can keep up to date with games played in other countries. 
-
-
-
-
-ACCEPTANCE CRITERIA:
-
+```
 GIVEN a dashboard with clickable 'league' buttons
-
 WHEN I click on a button
-
 THEN I am presented with a table from that league
-
 WHEN I click on a team in the table
-
 THEN I am given recent games played by that team, as well as an option to see future fixtures
-
 WHEN I click on a recent game
-
 THEN I am taken to a highlights video for that game, and the other games are displayed on the side of the screen
-
 WHEN I click, on another game
-
 THEN I am taken to the corresponding highlights video for that game
-
-
-
-WHEN PAGE LOADS, PROMTED FOR USER NAME AND FAVORITE TEAM. 
-
+WHEN page loads, promted for user name and favorite team. 
 THEN users favourite team and league will be pushed to the top. 
+```
+## Mock-Up
 
-OPTION to skip this and have a default view load. 
+The following image shows the web application's appearance and functionality:
 
-PSUEDO CODE: 
+![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for Atlanta.](./assets/images/mockup-page.png)
 
-HTML FILES - landing page with form, display dash with games and results, video page, stats page
+### Technical Acceptance Criteria(Jobs Have Been Done):
+- 
+### Screen Shots:
 
-CSS - FRAMEWORK - font awesome, google fonts
-
-JS - jquery, 
-
-API - football (soccer) videos, football standings, football-data
-
-LOCAL STORAGE - will store users favourite teams, leagues and players. 
-
-
-MVP - 
-
-user chooses team - stored in local storage
-
-understanding the limits of the API 
-
-make somrething small that work and then continue
-
-
-
-
-fetch("https://api.football-data.org/v2/competitions/6672/teams", {
-    headers: {
-        'X-Auth-Token': "d9a5e68af1764fc0acc74a34bc2ebb48"
-    },
-})
-.then(function(response) {
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
-  return response.json();
-})
-.then(function(data) {
-  // DO THINGS WITH TEH DATA
-});
+### Live view page: [Click Here!](https://github.com/patricktheodore/football-highlights-dashboard)
+- - -
+© 2021 Project 1 - Group 2(Patrick & Adam): Football Highlights Dashboard 
 
