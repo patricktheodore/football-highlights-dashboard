@@ -10,26 +10,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.3/css/foundation-float.min.css"
+        integrity="sha512-4D+CMcbKorl8zoKaFdYXQKa0O2/bvi1+be0y6nqg9xlKA7XszD7Az8lDIMN0731sJRxTLZcM61qpv0Da5QzPOA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <header>
-        <h1><a href=#home>Football Highlights</a></h1>
-        <nav>
-            <ul class="navbar">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Featured</a></li>
-                <li><a href="#">Contact</a></li>
+    <!-- <h1 id="titile">Football Highlights Dashboard</h1> -->
+    <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+        <div class="title-bar-title">Menu</div>
+    </div>
+    <div class="top-bar" id="responsive-menu">
+        <div class="top-bar-left">
+            <p class="menu-text">Football Highlights Dashboard</p>
+        </div>
+        <div class="top-bar-right">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li><a href="#0">About</a></li>
+                <li><a href="#0">Featured</a></li>
+                <li><a href="#0">Contact</a></li>
             </ul>
-            <div class="socials">
-                <a class="fab fa-github fa-2x" title="github"
-                    href="https://github.com/patricktheodore/football-highlights-dashboard/" target="_blank"></a>
-                <a class="fab fa-facebook fa-2x" title="facebook" href="#" target="_blank"></a>
-                <a class="fab fa-youtube fa-2x" title="youtube" href="#" target="_blank"></a>
-            </div>
-        </nav>
-    </header>
+        </div>
+        <!-- <div class="top-bar-right">
+            <ul class="menu">
+                <li><input type="search" placeholder="Search"></li>
+                <li><button type="button" class="button">Search</button></li>
+            </ul>
+        </div> -->
+    </div>
     <div id="container">
         <div class="form-group">
             <select id="team-select">
