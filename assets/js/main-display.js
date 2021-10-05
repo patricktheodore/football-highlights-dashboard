@@ -45,11 +45,11 @@ function getHighlights() {
                 if (data.response[i].title.includes(teamName)) {
 
                     //create a div
-                    const gameDiv = $('<div>').attr({ class: "cell small-12" });
+                    const gameDiv = $('<div>').attr({ class: "cell small-12 align-center" });
                     //create a h3 with text(title)
-                    const gameTitle = $('<a>').text(data.response[i].title).attr({ id: 'game-title' });
+                    const gameTitle = $('<button>').text(data.response[i].title).attr({ class: 'game-title' });
                     //create a div
-                    const gameTitleItem = $('<div>');
+                    const gameTitleItem = $('<div>').attr({ class: 'hlvideo' });
                     //create a button with text(highlights) and href matchviewURL
 
                     gameContainerDiv.append(
@@ -67,10 +67,9 @@ function getHighlights() {
                     videoContainer.innerHTML = highlightVideos[0].embed;
                     gameTitleItem.append(videoContainer);
 
-                    $('#game-title').on('click', function (event, ) {
-                        event.preventDefault();
-                        $(this).sibling(0).children(0).setAttribute('style', 'display: inline');
-                    })
+                    $('.game-title').click(function() {
+                        $(videoContainer).toggle();
+                      });
                 }
             }
         }
@@ -195,18 +194,22 @@ function getFixtures(teamID) {
                 const match = data.matches[i]
                 const tableRow = $('<tr>');
                 const competition = $('<p>').text(match.competition.name).attr({ class: "competition-tag" });
+                const utcDate = data.matches[i].utcDate;
+                const gameDate = moment.utc(utcDate).local().format("DD - MMM");
+                const gameDateLocal = $('<td>').text(gameDate).attr({ class: "date-tag" });
+                console.log(gameDate);
                 const homeTeamIcon = await getTeamLogo(match.homeTeam.id);
                 const awayTeamIcon = await getTeamLogo(match.awayTeam.id);
 
                 const homeTeam = createHomeTeam(match.homeTeam.name, homeTeamIcon).attr({ class: "home-team-tag" });
                 const awayTeam = createAwayTeam(match.awayTeam.name, awayTeamIcon).attr({ class: "away-team-tag" });
 
-                const vsEl = $('<td>').text(' vs ').attr({ class: 'vs-tag' });
+                const vsEl = $('<p>').text(' vs ').attr({ class: 'vs-tag' });
 
                 fixturesContainerDiv.append(
                     tableRow.append(
                         homeTeam,
-                        vsEl.append(competition),
+                        gameDateLocal.append(vsEl.append(competition)),
                         awayTeam
                     )
                 );

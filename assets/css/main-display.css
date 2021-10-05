@@ -159,8 +159,8 @@ table thead tr th {
     text-align: start;
 }
 
-.competition-tag,
-.th-comp {
+.date-tag {
+    width: 15%;
     text-align: center;
     font-size: 0.75rem;
 }
@@ -176,8 +176,15 @@ table thead tr th {
 }
 
 .vs-tag {
-    font: 0.75rem;
-    width: 10%;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.competition-tag,
+.th-comp {
+    text-align: center;
+    font-size: 0.75rem;
+    margin: 0;
 }
 
 footer {
