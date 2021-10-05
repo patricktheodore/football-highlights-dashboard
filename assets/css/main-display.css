@@ -1,15 +1,114 @@
-.team-crest-img {
-    height: 2rem;
+:root {
+    --dark: #38003d;
+    --light: #ffffff;
+    --secondary: #d9d9d9;
+    --primary: #999999;
+}
+html, body {
+    font-size: 16;
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: auto;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dark);
+    height: 5rem;
+    width: 100%;
+}
+header h1, a{
+    font-size: 2.5rem;
+    margin: auto;
+    font-weight: 3re;
+    text-decoration: none;
+    color: var(--light);
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+}
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar li a {
+    color: var(--light);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: lighter;
+    padding: 0 1.5rem;
+}
+.navbar li a:hover,
+header h1 a:hover,
+.socials a:hover {
+    color: var(--primary);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--light);
+    font-size: 1rem;
+}
+
+.socials a {
+    color: var(--light);
+    text-decoration: none;
+    font-weight: lighter;
+    padding: 0 1rem;
+    margin-right: 1%; 
+}
+.socials a:hover {
+    cursor: pointer;
+}
+button {
+    background-color: var(--dark);
+    color: var(--light);
+    cursor: pointer;
+    border: 0.5px solid;
+    outline: none;
+    border-radius: 8px; 
+}
+.text-input:hover {
+    box-shadow: 0 0 5px #999;
+}
+button:hover {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+#game-container {
+    width: 60%;
+}
+
+#game-title {
+    text-align: center;
+    margin: 2rem 0;
 }
 
 td {
-    display: inline-block;
-    text-align: left;
-    margin: 0 0.5rem;
+    padding: 0.5rem 0;
 }
 
-.team-name {
-    width: 250px;
+.team-crest-img {
+    height: 1.5rem;
+    width: 1.5rem;
+    text-align: center;
+    margin: 0 0.5rem;
 }
 
 .wins {
@@ -27,6 +126,88 @@ td {
     padding: 0 0.5rem;
 }
 
-.points {
-    background-color: turquoise;
+.teamForm {
+    font-size: 0.75rem;
+    margin-left: 1rem;
 }
+
+tr {
+    height: 1.5rem;
+}
+
+.league-pos {
+    width: 1rem;
+    text-align: center;
+}
+
+.league-icon {
+    width: 2.5rem;
+}
+
+.league-table-container,
+.fixtures-container {
+    width: 60%;
+    margin-top: 2rem;
+}
+
+table tr td,
+table thead tr th {
+    text-align: center;
+}
+
+.team-name {
+    text-align: start;
+}
+
+.date-tag {
+    width: 15%;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+.home-team-tag,
+.th-home {
+    text-align: right;
+}
+
+.away-team-tag,
+.th-away {
+    text-align: left;
+}
+
+.vs-tag {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.competition-tag,
+.th-comp {
+    text-align: center;
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+footer {
+    margin-top: 40%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--dark);
+    color: var(--light);
+    height: 4rem;
+}
+footer a {
+    text-decoration: none;
+    color: var(--light);
+    padding: 0 2rem;
+    margin: auto;
+}
+footer a:hover {
+    color: var(--secondary);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+  
+#open-button {
+    display: none;
+}
+
