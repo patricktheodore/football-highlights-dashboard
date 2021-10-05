@@ -112,28 +112,42 @@ button:hover {
     position: relative;
     text-align: center;
 }
+
+/*footer style*/
+
 footer {
     margin-top: 40%;
     display: flex;
     justify-content: center;
+    align-items: center ;
+    width: 100%;
     background-color: var(--dark);
     color: var(--light);
     height: 4rem;
 }
+
 footer a {
     text-decoration: none;
     color: var(--light);
     padding: 0 2rem;
     margin: auto;
+    font-size: 0.8rem;
 }
+
 footer a:hover {
     color: var(--secondary);
     transform: translateY(-0.1rem);
     transition: transform 150ms;
 }  
+
 #open-button {
     display: none;
 }
+
+/*modal style*/
+
+
+
 @media (max-width: 768px) {
     header{
         padding-bottom: 10%;
