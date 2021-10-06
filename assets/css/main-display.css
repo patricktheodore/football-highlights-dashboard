@@ -80,6 +80,12 @@ body {
 
 /* video container section end*/
 
+#upcoming-games,
+#league-table-id {
+    text-align: center;
+    width: 100%;
+    margin: 2rem 0;
+}
 
 td {
     padding: 0.5rem 0;
