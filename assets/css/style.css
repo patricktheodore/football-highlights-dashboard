@@ -100,30 +100,36 @@ button:hover {
     text-align: center;
 }
 
+/* footer start */
+
 footer {
-    margin-top: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center ;
     width: 100%;
     background-color: var(--dark);
     color: var(--light);
-    height: 4rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
-footer a {
+footer a,
+.portfolio-link {
     text-decoration: none;
     color: var(--light);
-    padding: 0 2rem;
-    margin: auto;
-    font-size: 0.8rem;
+    padding: 1rem 0;
 }
 
-footer a:hover {
+footer a:hover,
+.portfolio-link:hover {
     color: var(--secondary);
     transform: translateY(-0.1rem);
     transition: transform 150ms;
 }
+
+.portfolio-link {
+    font-size: 1rem;
+}
+
+/* footer end */
 
 /* modal popup display */
 #open-button {
