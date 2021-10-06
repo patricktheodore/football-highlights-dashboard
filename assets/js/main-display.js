@@ -45,7 +45,7 @@ function getHighlights() {
                 if (data.response[i].title.includes(teamName)) {
 
                     //create a div
-                    const gameDiv = $('<div>').attr({ class: "cell small-12 align-center" });
+                    const gameDiv = $('<div>').attr({ class: "cell small-12 align-center video-link-div" });
                     //create a h3 with text(title)
                     const gameTitle = $('<button>').text(data.response[i].title).addClass('game-title' + i).attr('id', 'video-reveal-button');
                     //create a div

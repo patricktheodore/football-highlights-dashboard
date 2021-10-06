@@ -4,93 +4,60 @@
     --secondary: #d9d9d9;
     --primary: #999999;
 }
-html, body {
-    font-size: 16;
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
     box-sizing: border-box;
     max-width: 100%;
-    margin: auto;
+    margin: 0;
     padding: 0;
     min-height: 100vh;
 }
 
-header {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+/* nav bar style start */
+
+.top-bar {
     background-color: var(--dark);
-    height: 5rem;
+    color: var(--light);
+    text-align: center;
     width: 100%;
-}
-header h1, a{
-    font-size: 2.5rem;
-    margin: auto;
-    font-weight: 3re;
-    text-decoration: none;
-    color: var(--light);
-}
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 70%;
-}
-.navbar {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.navbar li a {
-    color: var(--light);
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: lighter;
-    padding: 0 1.5rem;
-}
-.navbar li a:hover,
-header h1 a:hover,
-.socials a:hover {
-    color: var(--primary);
-    transform: translateY(-0.1rem);
-    transition: transform 150ms;
-}
-.socials {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    color: var(--light);
-    font-size: 1rem;
+    padding: 1rem 0;
+    margin-bottom: 0.5rem;
 }
 
-.socials a {
+#title {
     color: var(--light);
-    text-decoration: none;
-    font-weight: lighter;
-    padding: 0 1rem;
-    margin-right: 1%; 
 }
-.socials a:hover {
-    cursor: pointer;
-}
-button {
+
+/* nav bar style end */
+
+
+/* video container section start*/
+
+#video-reveal-button {
     background-color: var(--dark);
     color: var(--light);
+    height: 2rem;
+    width: 30%;
     cursor: pointer;
     border: 0.5px solid;
     outline: none;
-    border-radius: 8px; 
+    border-radius: 8px;
 }
-.text-input:hover {
-    box-shadow: 0 0 5px #999;
-}
-button:hover {
+
+#video-reveal-button:hover {
     background-color: var(--light);
     color: var(--dark);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
 }
+
+.video-link-div {
+    margin: 0.5rem 0;
+}
+
+
+/* video container section end*/
 
 #game-container {
     width: 60%;
@@ -186,16 +153,6 @@ table thead tr th {
     text-align: center;
     font-size: 0.75rem;
     margin: 0;
-}
-
-#video-reveal-button {
-    width: 60%;
-    background-color: var(--secondary);
-    color: black;
-    border-radius: 0;
-    line-height: 1.5;
-    height: 2rem;
-    font-size: 1.5rem;
 }
 
 /* footer start */
