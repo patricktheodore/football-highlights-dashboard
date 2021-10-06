@@ -12,49 +12,25 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
         integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+        <!--google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <!-- <h1 id="titile">Football Highlights Dashboard</h1> -->
-    <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
-        <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
-        <div class="title-bar-title">Menu</div>
-    </div>
-    <div class="top-bar" id="responsive-menu">
-        <div class="top-bar-left">
-            <p class="menu-text">Football Highlights Dashboard</p>
-        </div>
-        <div class="top-bar-right">
-            <ul class="dropdown menu" data-dropdown-menu>
-                <li><a href="#0">About</a></li>
-                <li><a href="#0">Featured</a></li>
-                <li><a href="#0">Contact</a></li>
-            </ul>
 
-        </div>
-        <!-- <div class="top-bar-right">
-            <ul class="menu">
-                <li><input type="search" placeholder="Search"></li>
-                <li><button type="button" class="button">Search</button></li>
-            </ul>
-        </div> -->
+    <div class="top-bar align-center">
+        <div class="title"><h2>football factory.</h2></div>
     </div>
-
-            <div class="socials">
-                <a class="fab fa-github fa-2x" title="github"
-                    href="https://github.com/patricktheodore/football-highlights-dashboard/" target="_blank"></a>
-                <a class="fab fa-facebook fa-2x" title="facebook" href="#" target="_blank"></a>
-                <a class="fab fa-youtube fa-2x" title="youtube" href="#" target="_blank"></a>
-            </div>
-        </nav>
-    </header>
     
 
-    <div id="container">
-        <div class="form-group">
+    <div class="grid-x align-center" id="page-wrapper">
+
+        <div class="cell small-10 medium-8 large-6 form-group">
             <select id="team-select">
-                <option value="">Select Team</option>
+                <option value="">English Premier League</option>
             </select>
             <button id="team-select-btn">Load My Team</button>
         </div>
@@ -64,13 +40,13 @@
             <p><button class="button" id="open-button" data-open="exampleModal1"></button></p>
 
             <div class="reveal" id="exampleModal1" data-reveal>
-                <h1>Oops!</h1>
-                <p class="lead">Please select a team from the list. </p>
-                <p>If the list is empty, please try again by refreshing the page. Thanks!</p>
+                <h1 class="modal-content">Oops!</h1>
+                <p class="lead modal-content">Please select a team from the list. </p>
+                <p class="modal-content">If the list is empty, please try again by refreshing the page. Thanks!</p>
                 <button class="close-button" data-close aria-label="Close modal" type="button">
                   <span aria-hidden="true">&times;</span>
                 </button>
-              </div>
+            </div>
     </div>
 
     <footer id="footer">

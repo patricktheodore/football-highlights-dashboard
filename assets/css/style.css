@@ -6,101 +6,83 @@
     --primary: #999999;
 }
 /* universal style */
-html, body {
+body {
+    font-family: 'Ubuntu', sans-serif;
     width: 100%;
     min-height: 100vh;
     background-image: url(../images/background-image.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    font-size: 16;
+    font-size: 16px;
     color: var(--light);
     box-sizing: border-box;
     max-width: 100%;
     margin: 0;
     padding: 0;
 }  
-/* nav bar style */
-.top-bar-left p{
-    font-size: 3rem;
-}
-.top-bar-right{
+
+/* nav bar style start */
+
+.top-bar {
     background-color: var(--dark);
-    margin: auto;
-    padding-top: 1%;
-}
-.top-bar-right ui li a{
     color: var(--light);
-}
-.top-bar{
-    background-color: var(--dark);
-}
-.top-bar ul{
-    background-color: var(--dark);
-    margin: auto;
-}
-.top-bar li a{
-    background-color: var(--dark);
-    font-size: 2rem;
-    color: var(--light);
-}
-.menutext .dropdown{
-    background-color: var(--dark);
-}
-h1{
-    background-color: var(--dark);
     text-align: center;
-}
-/* header h1 a:hover,
-.socials a:hover {
-    color: var(--primary);
-    transform: translateY(-0.1rem);
-    transition: transform 150ms;
-} */
-/* .socials {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    color: var(--light);
-    font-size: 1rem;
+    width: 100%;
+    padding: 1rem 0;
 }
 
-.socials a {
-    display: flex;
+#title {
     color: var(--light);
-    text-decoration: none;
-    font-weight: lighter;
-    padding: 0 1rem;
-    margin-right: 1%; 
 }
-.socials a:hover {
-    cursor: pointer;
-} */
-/* button, dropbox style */
-button {
+
+/* nav bar style end */
+
+
+/* select form style start*/
+
+#team-select {
+    width: 50%;
+    height: 2rem;
+}
+
+#team-select:hover {
+    background-color: #dddbdb;
+}
+
+#team-select-btn {
     background-color: var(--dark);
     color: var(--light);
+    height: 2rem;
+    width: 30%;
     cursor: pointer;
     border: 0.5px solid;
     outline: none;
     border-radius: 8px;
-    padding: 3.5px; 
-}
-.text-input:hover {
-    box-shadow: 0 0 5px #999;
-}
-button:hover {
-    background-color: var(--light);
-    color: var(--dark);
-}
-.form-group{
-    margin-top: 5rem;
-    position: relative;
-    text-align: center;
 }
 
-/* footer start */
+#team-select-btn:hover {
+    background-color: var(--light);
+    color: var(--dark);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.form-group {
+    margin: 1rem 0;
+}
+/* select form style end */
+
+/* modal style start */
+
+.modal-content {
+    color: black;
+}
+
+/*modal style end */
+
+
+/* footer style start */
 
 footer {
     width: 100%;
@@ -134,5 +116,16 @@ footer a:hover,
 /* modal popup display */
 #open-button {
     display: none;
+}
+
+@media screen and (max-width:640px) {
+    #team-select {
+        width: 80%;
+    }
+
+    #team-select-btn {
+        width: 50%;
+    }
+    
 }
 
