@@ -4,101 +4,82 @@
     --secondary: #d9d9d9;
     --primary: #999999;
 }
-html, body {
-    font-size: 16;
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
     box-sizing: border-box;
     max-width: 100%;
-    margin: auto;
+    margin: 0;
     padding: 0;
+    min-height: 100vh;
 }
 
-header {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+/* nav bar style start */
+
+.top-bar {
     background-color: var(--dark);
-    height: 5rem;
+    color: var(--light);
+    text-align: center;
     width: 100%;
+    padding: 1rem 0;
+    margin-bottom: 0.5rem;
 }
-header h1, a{
-    font-size: 2.5rem;
-    margin: auto;
-    font-weight: 3re;
-    text-decoration: none;
+
+#title {
     color: var(--light);
 }
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 70%;
+
+/* nav bar style end */
+
+
+/* video container section start*/
+
+#video-reveal-button {
+    background-color: var(--light);
+    color: black;
+    height: 2rem;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    font-size: 1.5rem;
 }
-.navbar {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.navbar li a {
-    color: var(--light);
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: lighter;
-    padding: 0 1.5rem;
-}
-.navbar li a:hover,
-header h1 a:hover,
-.socials a:hover {
-    color: var(--primary);
+
+#video-reveal-button:hover {
+    background-color: var(--secondary);
+    color: var(--dark);
     transform: translateY(-0.1rem);
     transition: transform 150ms;
 }
-.socials {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    color: var(--light);
-    font-size: 1rem;
+
+.game-title {
+    width: 60%;
+    text-align: center;
 }
 
-.socials a {
-    color: var(--light);
-    text-decoration: none;
-    font-weight: lighter;
-    padding: 0 1rem;
-    margin-right: 1%; 
+.fa-caret-down {
+    margin-left: 1rem;
 }
-.socials a:hover {
-    cursor: pointer;
-}
-button {
-    background-color: var(--dark);
-    color: var(--light);
-    cursor: pointer;
-    border: 0.5px solid;
-    outline: none;
-    border-radius: 8px; 
-}
-.text-input:hover {
-    box-shadow: 0 0 5px #999;
-}
-button:hover {
-    background-color: var(--light);
-    color: var(--dark);
+
+.highlights-date, 
+.highlights-competition {
+    font-size: 0.8rem;
 }
 
 #game-container {
     width: 60%;
 }
 
-#game-title {
-    text-align: center;
-    margin: 2rem 0;
+.highlights-table-head {
+    width: 100%;
 }
+
+.video-link-div {
+    margin: 0.5rem 0;
+    width: 60%;
+}
+
+/* video container section end*/
+
 
 td {
     padding: 0.5rem 0;
@@ -187,37 +168,85 @@ table thead tr th {
     margin: 0;
 }
 
-#video-reveal-button {
-    width: 60%;
-    background-color: var(--secondary);
-    color: black;
-    border-radius: 0;
-    line-height: 1.5;
-    height: 2rem;
-    font-size: 1.5rem;
-}
+/* footer start */
 
 footer {
-    margin-top: 40%;
-    display: flex;
-    justify-content: center;
+    width: 100%;
     background-color: var(--dark);
     color: var(--light);
-    height: 4rem;
+    position: sticky;
+    bottom: 0;
+    left: 0;
 }
-footer a {
+
+footer a,
+.portfolio-link {
     text-decoration: none;
     color: var(--light);
-    padding: 0 2rem;
-    margin: auto;
+    padding: 1rem 0;
 }
-footer a:hover {
+
+footer a:hover,
+.portfolio-link:hover {
     color: var(--secondary);
     transform: translateY(-0.1rem);
     transition: transform 150ms;
 }
-  
-#open-button {
-    display: none;
+
+.portfolio-link {
+    font-size: 1rem;
 }
 
+/* footer end */
+
+@media screen and (max-width:900px) {
+    #game-container {
+        width: 100%;
+    }
+    
+    #video-reveal-button {
+        margin-bottom: 1rem;
+    }
+
+    .fixtures-container {
+        width: 80%;
+    }
+
+    .league-table-container {
+        width: 80%;
+    }    
+}
+
+@media screen and (max-width:600px) {
+    #game-container {
+        width: 100%;
+    }
+    
+    #video-reveal-button {
+        margin-bottom: 1rem;
+    }
+
+    .fixtures-container {
+        width: 100%;
+    }
+
+    .league-table-container {
+        width: 100%;
+    }    
+}
+
+@media screen and (max-width:900px) {
+    .gamesPlayedCol, 
+    .goalDifCol {
+        display: none;
+    }
+
+    .league-pos,
+    .league-icon,
+    .posCol,
+    .iconCol {
+        width: 0.1rem;
+        padding: 0;
+        margin: 0;
+    }
+}

@@ -45,16 +45,22 @@ function getHighlights() {
                 if (data.response[i].title.includes(teamName)) {
 
                     //create a div
-                    const gameDiv = $('<div>').attr({ class: "cell small-12 align-center" });
+                    const gameDiv = $('<div>').attr({ class: "cell small-12 align-center video-link-div" });
                     //create a h3 with text(title)
                     const gameTitle = $('<button>').text(data.response[i].title).addClass('game-title' + i).attr('id', 'video-reveal-button');
                     //create a div
                     const gameTitleItem = $('<div>');
                     //create a button with text(highlights) and href matchviewURL
+                    const iconDown = $('<i>').addClass('fas fa-caret-down');
+                    const highlightsDateUTC = data.response[i].date;
+                    const highlightsDate = moment.utc(highlightsDateUTC).local().format("DD - MMM");
+                    const highlightsDateLocal = $('<div>').text(highlightsDate).attr({ class: "highlights-date" });
+                    const highlightsCompetition = $('<div>').text(data.response[i].competition).addClass('highlights-competition');
+
 
                     gameContainerDiv.append(
                         gameDiv.append(
-                            gameTitle,
+                            gameTitle.append(iconDown),
                             gameTitleItem
                         )
                     );
@@ -65,7 +71,7 @@ function getHighlights() {
                     videoContainer.setAttribute('style', 'width: 100%');
                     videoContainer.setAttribute('style', 'display: none');
                     videoContainer.innerHTML = highlightVideos[0].embed;
-                    gameTitleItem.append(videoContainer);
+                    gameTitleItem.append(videoContainer, highlightsCompetition, highlightsDateLocal);
 
                     $('.game-title' + i).click(function() {
                         $(videoContainer).toggle();
@@ -125,9 +131,9 @@ function getStandings() {
                 //td with games lost
                 const teamLosses = $('<span>').text(data.standings[0].table[i].lost).attr({ class: "losses" });
                 //td with games played
-                const teamPlayedGames = $('<td>').text(data.standings[0].table[i].playedGames);
+                const teamPlayedGames = $('<td>').text(data.standings[0].table[i].playedGames).addClass('gamesPlayedCol');
                 //td goals diff
-                const teamGoalsDiff = $('<td>').text(data.standings[0].table[i].goalDifference);
+                const teamGoalsDiff = $('<td>').text(data.standings[0].table[i].goalDifference).addClass('goalDifCol');
                 //td team points
                 const teamPoints = $('<td>').text(data.standings[0].table[i].points).attr({ class: "points" });
 
