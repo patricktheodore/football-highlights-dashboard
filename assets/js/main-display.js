@@ -131,9 +131,9 @@ function getStandings() {
                 //td with games lost
                 const teamLosses = $('<span>').text(data.standings[0].table[i].lost).attr({ class: "losses" });
                 //td with games played
-                const teamPlayedGames = $('<td>').text(data.standings[0].table[i].playedGames);
+                const teamPlayedGames = $('<td>').text(data.standings[0].table[i].playedGames).addClass('gamesPlayedCol');
                 //td goals diff
-                const teamGoalsDiff = $('<td>').text(data.standings[0].table[i].goalDifference);
+                const teamGoalsDiff = $('<td>').text(data.standings[0].table[i].goalDifference).addClass('goalDifCol');
                 //td team points
                 const teamPoints = $('<td>').text(data.standings[0].table[i].points).attr({ class: "points" });
 

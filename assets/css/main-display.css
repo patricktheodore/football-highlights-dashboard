@@ -199,3 +199,54 @@ footer a:hover,
 
 /* footer end */
 
+@media screen and (max-width:900px) {
+    #game-container {
+        width: 100%;
+    }
+    
+    #video-reveal-button {
+        margin-bottom: 1rem;
+    }
+
+    .fixtures-container {
+        width: 80%;
+    }
+
+    .league-table-container {
+        width: 80%;
+    }    
+}
+
+@media screen and (max-width:600px) {
+    #game-container {
+        width: 100%;
+    }
+    
+    #video-reveal-button {
+        margin-bottom: 1rem;
+    }
+
+    .fixtures-container {
+        width: 100%;
+    }
+
+    .league-table-container {
+        width: 100%;
+    }    
+}
+
+@media screen and (max-width:900px) {
+    .gamesPlayedCol, 
+    .goalDifCol {
+        display: none;
+    }
+
+    .league-pos,
+    .league-icon,
+    .posCol,
+    .iconCol {
+        width: 0.1rem;
+        padding: 0;
+        margin: 0;
+    }
+}
