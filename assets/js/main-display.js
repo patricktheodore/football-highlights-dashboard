@@ -51,10 +51,16 @@ function getHighlights() {
                     //create a div
                     const gameTitleItem = $('<div>');
                     //create a button with text(highlights) and href matchviewURL
+                    const iconDown = $('<i>').addClass('fas fa-caret-down');
+                    const highlightsDateUTC = data.response[i].date;
+                    const highlightsDate = moment.utc(highlightsDateUTC).local().format("DD - MMM");
+                    const highlightsDateLocal = $('<div>').text(highlightsDate).attr({ class: "highlights-date" });
+                    const highlightsCompetition = $('<div>').text(data.response[i].competition).addClass('highlights-competition');
+
 
                     gameContainerDiv.append(
                         gameDiv.append(
-                            gameTitle,
+                            gameTitle.append(iconDown),
                             gameTitleItem
                         )
                     );
@@ -65,7 +71,7 @@ function getHighlights() {
                     videoContainer.setAttribute('style', 'width: 100%');
                     videoContainer.setAttribute('style', 'display: none');
                     videoContainer.innerHTML = highlightVideos[0].embed;
-                    gameTitleItem.append(videoContainer);
+                    gameTitleItem.append(videoContainer, highlightsCompetition, highlightsDateLocal);
 
                     $('.game-title' + i).click(function() {
                         $(videoContainer).toggle();

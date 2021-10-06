@@ -35,38 +35,51 @@ body {
 /* video container section start*/
 
 #video-reveal-button {
-    background-color: var(--dark);
-    color: var(--light);
+    background-color: var(--light);
+    color: black;
     height: 2rem;
-    width: 30%;
+    width: 100%;
     cursor: pointer;
-    border: 0.5px solid;
     outline: none;
-    border-radius: 8px;
+    font-size: 1.5rem;
 }
 
 #video-reveal-button:hover {
-    background-color: var(--light);
+    background-color: var(--secondary);
     color: var(--dark);
     transform: translateY(-0.1rem);
     transition: transform 150ms;
 }
 
-.video-link-div {
-    margin: 0.5rem 0;
+.game-title {
+    width: 60%;
+    text-align: center;
 }
 
+.fa-caret-down {
+    margin-left: 1rem;
+}
 
-/* video container section end*/
+.highlights-date, 
+.highlights-competition {
+    font-size: 0.8rem;
+}
 
 #game-container {
     width: 60%;
 }
 
-#game-title {
-    text-align: center;
-    margin: 2rem 0;
+.highlights-table-head {
+    width: 100%;
 }
+
+.video-link-div {
+    margin: 0.5rem 0;
+    width: 60%;
+}
+
+/* video container section end*/
+
 
 td {
     padding: 0.5rem 0;
