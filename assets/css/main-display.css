@@ -187,6 +187,16 @@ table thead tr th {
     margin: 0;
 }
 
+#video-reveal-button {
+    width: 60%;
+    background-color: var(--secondary);
+    color: black;
+    border-radius: 0;
+    line-height: 1.5;
+    height: 2rem;
+    font-size: 1.5rem;
+}
+
 footer {
     margin-top: 40%;
     display: flex;

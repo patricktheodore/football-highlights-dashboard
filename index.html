@@ -32,6 +32,7 @@
                 <li><a href="#0">Featured</a></li>
                 <li><a href="#0">Contact</a></li>
             </ul>
+
         </div>
         <!-- <div class="top-bar-right">
             <ul class="menu">
@@ -40,6 +41,17 @@
             </ul>
         </div> -->
     </div>
+
+            <div class="socials">
+                <a class="fab fa-github fa-2x" title="github"
+                    href="https://github.com/patricktheodore/football-highlights-dashboard/" target="_blank"></a>
+                <a class="fab fa-facebook fa-2x" title="facebook" href="#" target="_blank"></a>
+                <a class="fab fa-youtube fa-2x" title="youtube" href="#" target="_blank"></a>
+            </div>
+        </nav>
+    </header>
+    
+
     <div id="container">
         <div class="form-group">
             <select id="team-select">
@@ -48,22 +60,24 @@
             <button id="team-select-btn">Load My Team</button>
         </div>
         </form>
-        <div class="row">
+
             <!--foundation modal-->
-            <div class="columns">
-                <div class="reveal" id="exampleModal11" aria-labelledby="exampleModalHeader11" data-reveal>
-                    <p id="open-modal"></p><button class="button" data-open="exampleModal11" id="open-button"></button>
-                    </p>
-                    <p id="exampleModalHeader11">please select a team from the list.</p>
-                    <button class="close-button" data-close aria-label="Close Accessible Modal" type="button">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            </div>
-        </div>
+            <p><button class="button" id="open-button" data-open="exampleModal1"></button></p>
+
+            <div class="reveal" id="exampleModal1" data-reveal>
+                <h1>Oops!</h1>
+                <p class="lead">Please select a team from the list. </p>
+                <p>If the list is empty, please try again by refreshing the page. Thanks!</p>
+                <button class="close-button" data-close aria-label="Close modal" type="button">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
     </div>
+
     <footer id="footer">
-        <h3 href="#">&copy; Football Highlights Dashboard</h3>
+        <a href="https://github.com/patricktheodore" target="_blank">patricktheodore.</a>
+        <a class="fab fa-github fa-2x" title="github" href="https://github.com/patricktheodore/football-highlights-dashboard/" target="_blank"></a>
+        <a href="https://github.com/ThiHoangPham" target="_blank">ThiHoangPham</a>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"
