@@ -33,7 +33,7 @@ The following image shows the web application's appearance and functionality:
 
 ![mockup-page-img](https://user-images.githubusercontent.com/88220398/136380069-b61586f9-a75e-4f0b-9148-55454169b58e.gif)
 
-### Resources::
+### Resources
 * MDN Web Docs Moz: https://developer.mozilla.org/en-US/
 * Stack Overflow: https://stackoverflow.com/
 * Football-data.org https://api.football-data.org/
@@ -43,8 +43,9 @@ The following image shows the web application's appearance and functionality:
 * CDNjs: https://cdnjs.cloudflare.com/
 ### Screen Shots:
 <p align="right">(<a href="#top">back to top</a>)</p>
+
 ### Live View Page: [Click Here!](https://patricktheodore.github.io/football-highlights-dashboard/)
 
-- - -s
+- - -
 © 2021 Project 1 - Group 2(Patrick & Adam): Football Highlights Dashboard 
 
