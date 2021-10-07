@@ -32,12 +32,12 @@ function getTeams() {
                 if (a < b) return -1;
                 return 0;
             });
-            
+
             console.log(teamNameData);
 
             for (let i = 0; i < teamNameData.length; i++) {
                 const teamName = $('<option>').attr('value', teamNameData[i]).text(teamNameData[i]);
-                
+
                 teamSelect.append(teamName);
             }
         });

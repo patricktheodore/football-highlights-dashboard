@@ -73,9 +73,9 @@ function getHighlights() {
                     videoContainer.innerHTML = highlightVideos[0].embed;
                     gameTitleItem.append(videoContainer, highlightsCompetition, highlightsDateLocal);
 
-                    $('.game-title' + i).click(function() {
+                    $('.game-title' + i).click(function () {
                         $(videoContainer).toggle();
-                      });
+                    });
                 }
             }
         }
