@@ -45,6 +45,6 @@ The following image shows the web application's appearance and functionality:
 <p align="right">(<a href="#top">back to top</a>)</p>
 ### Live View Page: [Click Here!](https://patricktheodore.github.io/football-highlights-dashboard/)
 
-- - -
+- - -s
 © 2021 Project 1 - Group 2(Patrick & Adam): Football Highlights Dashboard 
 
