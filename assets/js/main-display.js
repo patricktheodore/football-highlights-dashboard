@@ -88,7 +88,7 @@ $(document).ready(function () {
 });
 
 function getStandings() {
-    fetch("http://api.football-data.org/v2/competitions/2021/standings", {
+    fetch("https://api.football-data.org/v2/competitions/2021/standings", {
         headers: {
             'X-Auth-Token': "d9a5e68af1764fc0acc74a34bc2ebb48"
         },
@@ -155,7 +155,7 @@ function getStandings() {
 }
 
 function getTeamLogo(teamID) {
-    return fetch(`http://api.football-data.org/v2/teams/${teamID}`, {
+    return fetch(`https://api.football-data.org/v2/teams/${teamID}`, {
         headers: {
             'X-Auth-Token': "d9a5e68af1764fc0acc74a34bc2ebb48"
         },
@@ -183,7 +183,7 @@ function createAwayTeam(name, icon) {
 }
 
 function getFixtures(teamID) {
-    fetch(`http://api.football-data.org/v2/teams/${teamID}/matches?status=SCHEDULED&dateFROM=${dateToday}`, {
+    fetch(`https://api.football-data.org/v2/teams/${teamID}/matches?status=SCHEDULED&dateFROM=${dateToday}`, {
         headers: {
             'X-Auth-Token': "d9a5e68af1764fc0acc74a34bc2ebb48"
         },
