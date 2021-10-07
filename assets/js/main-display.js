@@ -42,7 +42,7 @@ function getHighlights() {
 
             //search data for teamName
             for (let i = 0; i < data.response.length; i++) {
-                if (data.response[i].title.includes(teamName)) {
+                if (data.response[i].title.includes(teamName) && !data.response[i].competition.includes('Women')) { /* fixes issue where womens team highlights were being loaded in the wrong location */
 
                     //create a div
                     const gameDiv = $('<div>').attr({ class: "cell small-12 align-center video-link-div" });
@@ -222,3 +222,11 @@ function getFixtures(teamID) {
             }
         });
 };
+
+/*adds option to choose another team from the home screen*/ 
+const backBtn = $('.back-link')
+
+backBtn.on('click', function() {
+    localStorage.clear();
+    document.location = "https://patricktheodore.github.io/football-highlights-dashboard/";
+})
