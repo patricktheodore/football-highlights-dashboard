@@ -60,7 +60,7 @@ teamSelectBtn.on('click', function (event) {
         $('#open-button').trigger('click');
     } else {
         localStorage.setItem('team', selectedTeam);
-        document.location = "file:///Users/patricksara/Desktop/BootCamp/football-highlights-dashboard/assets/html/main-display.html"
+        document.location = "./assets/html/main-display.html"
     }
 });
 
