@@ -2,7 +2,7 @@
 
 With your team, you'll conceive and execute a design that solves a real-world problem by integrating data received from multiple server-side API requests. You will also learn about agile development methodologies to help you work collaboratively. You will implement feature and bug fixes using git branch workflow and pull requests.
 You will write your own user stories and acceptance criteria in GitHub Issues to help your team stay on track with the project. Using GitHub Project as a means to track the status of your project tasks will help you understand the benefits of Kanban boards.
-# Project 1 - Group 2(Patrick & Adam): Football Highlights Dashboard
+# Project 1 - Group 2(Patrick & Adam): Football Factory.
 
 ## User Story
 
@@ -33,10 +33,16 @@ The following image shows the web application's appearance and functionality:
 
 ![mockup-page-img](https://user-images.githubusercontent.com/88220398/136380069-b61586f9-a75e-4f0b-9148-55454169b58e.gif)
 
-### Jobs Have Been Done:
-- 
+### Resources::
+* MDN Web Docs Moz: https://developer.mozilla.org/en-US/
+* Stack Overflow: https://stackoverflow.com/
+* Football-data.org https://api.football-data.org/
+* Scorebat: https://www.scorebat.com/video-api/
+* Foundation: https://get.foundation/
+* Google Fonts: https://fonts.googleapis.com
+* CDNjs: https://cdnjs.cloudflare.com/
 ### Screen Shots:
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 ### Live View Page: [Click Here!](https://patricktheodore.github.io/football-highlights-dashboard/)
 - - -
 © 2021 Project 1 - Group 2(Patrick & Adam): Football Highlights Dashboard 
