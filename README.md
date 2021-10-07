@@ -15,17 +15,17 @@ SO THAT I SO THAT I can keep up to date with games played
 ## Acceptance Criteria
 
 ```
-GIVEN a dashboard with clickable 'league' buttons
-WHEN I click on a button
-THEN I am presented with a table from that league
-WHEN I click on a team in the table
-THEN I am given recent games played by that team, as well as an option to see future fixtures
-WHEN I click on a recent game
-THEN I am taken to a highlights video for that game, and the other games are displayed on the side of the screen
-WHEN I click, on another game
-THEN I am taken to the corresponding highlights video for that game
-WHEN page loads, promted for user name and favorite team. 
-THEN users favourite team and league will be pushed to the top. 
+GIVEN a landing page that displays teams from the english premier league
+WHEN I select on a team from the drop down list
+THEN I am presented with recent games played by that team
+WHEN I click on a recent game, a highlight video is displayed underneat it
+THEN I am shown upcoming games that team has scheduled. 
+WHEN I scroll down the page
+THEN I see the league table/standings for the league that team plays in
+WHEN I click on the go back button
+THEN I am taken to the landing page where i can select another team
+IF I leave the page and return, it will remember my favourite team and display the above
+IF I return to the home page, my favourite team will be cleared
 ```
 ## Mock-Up-Page
 
@@ -41,8 +41,6 @@ The following image shows the web application's appearance and functionality:
 * Foundation: https://get.foundation/
 * Google Fonts: https://fonts.googleapis.com
 * CDNjs: https://cdnjs.cloudflare.com/
-### Screen Shots:
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Live View Page: [Click Here!](https://patricktheodore.github.io/football-highlights-dashboard/)
 
