@@ -40,6 +40,10 @@ body {
     transition: transform 150ms;
 }
 
+.fa-long-arrow-alt-left {
+    margin-right: 0.2rem;
+}
+
 /* nav bar style end */
 
 

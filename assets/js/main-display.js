@@ -3,31 +3,18 @@ const fixturesContainerDiv = $('.fixtures-table-head');
 const leagueTableContainer = $('.league-table');
 const dateToday = moment().format('YYYY-MM-DD');
 
-let userTeamName = localStorage.getItem('team'); //need to edit team name by dropping FC off the end. 
-let teamName = userTeamName.replace(" FC", "");
+let userTeamName = localStorage.getItem('team'); 
+if (!userTeamName) {
+    document.location = "https://patricktheodore.github.io/football-highlights-dashboard/"
+};
 
-//get team name from local storage
-//display it as the title of the page
+let teamName = userTeamName.replace(" FC", "");
 
 function getHighlightVideo(videos) {
     return videos.filter(function (video) {
         return video.title.toLowerCase() === 'highlights';
     })
 }
-
-//use other api to display score, and loop through array to find highlights using the away team as key with this api. 
-
-//displaying team name is not needed, re use icon function from below for teams. 
-
-//try and not use async function sam wrote. 
-
-//store icons on page load??? get id and icon url at the same time
-
-//use fetch(`http://api.football-data.org/v2/teams/${teamID}/matches?status=FINISHED`
-
-//if ((response.hometeam.name === userteams opponents || awayteam.name) && (response.awayteam.name === || ....) then load highlights
-
-
 
 function getHighlights() {
     fetch("https://www.scorebat.com/video-api/v3/")
@@ -42,15 +29,11 @@ function getHighlights() {
 
             //search data for teamName
             for (let i = 0; i < data.response.length; i++) {
-                if (data.response[i].title.includes(teamName) && !data.response[i].competition.includes('Women')) { /* fixes issue where womens team highlights were being loaded in the wrong location */
+                if (data.response[i].title.includes(teamName) && !data.response[i].competition.includes('Women')) { // fixes issue where womens team highlights were being loaded in the wrong location
 
-                    //create a div
                     const gameDiv = $('<div>').attr({ class: "cell small-12 align-center video-link-div" });
-                    //create a h3 with text(title)
                     const gameTitle = $('<button>').text(data.response[i].title).addClass('game-title' + i).attr('id', 'video-reveal-button');
-                    //create a div
                     const gameTitleItem = $('<div>');
-                    //create a button with text(highlights) and href matchviewURL
                     const iconDown = $('<i>').addClass('fas fa-caret-down');
                     const highlightsDateUTC = data.response[i].date;
                     const highlightsDate = moment.utc(highlightsDateUTC).local().format("DD - MMM");
@@ -112,29 +95,18 @@ function getStandings() {
                     getFixtures(teamID);
                 }
 
-                //create a table row
+
                 const tableRow = $('<tr>');
-                //td with position
                 const teamPos = $('<td>').text(data.standings[0].table[i].position).attr({ class: "league-pos" });
-                //td for team crest image
                 const teamCrestContainer = $('<td>').attr({ class: "league-icon" });
-                //img with src of crest url
                 const teamCrestImg = $('<img>').attr({ src: data.standings[0].table[i].team.crestUrl, class: "team-crest-img" });
-                //td with team name
                 const teamName = $('<td>').text(data.standings[0].table[i].team.name).attr({ class: "team-name" });
-                //span with team form
                 const teamForm = $('<span>').attr({ class: "teamForm" });
-                //p with games won
                 const teamWins = $('<span>').text(data.standings[0].table[i].won).attr({ class: "wins" });
-                //td with games drawn
                 const teamDraws = $('<span>').text(data.standings[0].table[i].draw).attr({ class: "draws" });
-                //td with games lost
                 const teamLosses = $('<span>').text(data.standings[0].table[i].lost).attr({ class: "losses" });
-                //td with games played
                 const teamPlayedGames = $('<td>').text(data.standings[0].table[i].playedGames).addClass('gamesPlayedCol');
-                //td goals diff
                 const teamGoalsDiff = $('<td>').text(data.standings[0].table[i].goalDifference).addClass('goalDifCol');
-                //td team points
                 const teamPoints = $('<td>').text(data.standings[0].table[i].points).attr({ class: "points" });
 
                 leagueTableContainer.append(
@@ -223,10 +195,26 @@ function getFixtures(teamID) {
         });
 };
 
-/*adds option to choose another team from the home screen*/ 
+// adds option to choose another team from the home screen
 const backBtn = $('.back-link')
 
 backBtn.on('click', function() {
     localStorage.clear();
     document.location = "https://patricktheodore.github.io/football-highlights-dashboard/";
 })
+
+
+
+// --------- future development ----------- //
+
+//use other api to display score, and loop through array to find highlights using the away team as key with this api. 
+
+//displaying team name is not needed, re use icon function from below for teams. 
+
+//try and not use async function sam wrote. 
+
+//store icons on page load??? get id and icon url at the same time
+
+//use fetch(`http://api.football-data.org/v2/teams/${teamID}/matches?status=FINISHED`
+
+//if ((response.hometeam.name === userteams opponents || awayteam.name) && (response.awayteam.name === || ....) then load highlights
