@@ -27,17 +27,17 @@ THEN I am taken to the corresponding highlights video for that game
 WHEN page loads, promted for user name and favorite team. 
 THEN users favourite team and league will be pushed to the top. 
 ```
-## Mock-Up
+## Mock-Up-Page
 
 The following image shows the web application's appearance and functionality:
 
-![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for Atlanta.](./assets/images/mockup-page.png)
+![mockup-page-img](https://user-images.githubusercontent.com/88220398/136380069-b61586f9-a75e-4f0b-9148-55454169b58e.gif)
 
-### Technical Acceptance Criteria(Jobs Have Been Done):
+### Jobs Have Been Done:
 - 
 ### Screen Shots:
 
-### Live view page: [Click Here!](https://github.com/patricktheodore/football-highlights-dashboard)
+### Live View Page: [Click Here!](https://patricktheodore.github.io/football-highlights-dashboard/)
 - - -
 © 2021 Project 1 - Group 2(Patrick & Adam): Football Highlights Dashboard 
 
