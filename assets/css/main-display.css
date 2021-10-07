@@ -25,8 +25,23 @@ body {
     margin-bottom: 0.5rem;
 }
 
-#title {
+.title {
     color: var(--light);
+}
+
+.back-link {
+    color: var(--light);
+    font-size: 1.2rem;
+}
+
+.back-link:hover {
+    color: var(--secondary);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.fa-long-arrow-alt-left {
+    margin-right: 0.2rem;
 }
 
 /* nav bar style end */

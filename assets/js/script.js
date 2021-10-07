@@ -46,6 +46,13 @@ function getTeams() {
 
 
 $(document).ready(function () {
+    
+    var userTeam = localStorage.getItem('team');
+
+    if (userTeam) {
+        document.location = "./assets/html/main-display.html"
+    } 
+    
     getTeams();
 
     teamSelect.change(function () {
@@ -65,3 +72,9 @@ teamSelectBtn.on('click', function (event) {
 });
 
 $(document).foundation();
+
+//on page load
+//get local storage
+//if empty, do nothing
+//if populated, team name = local storage
+//document location. main index. 
