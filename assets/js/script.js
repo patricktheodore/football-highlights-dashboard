@@ -5,7 +5,7 @@ let selectedTeam;
 let teamNameData = [];
 
 function getTeams() {
-    fetch("http://api.football-data.org/v2/competitions/2021/teams", {
+    fetch("https://api.football-data.org/v2/competitions/2021/teams", {
         headers: {
             'X-Auth-Token': "d9a5e68af1764fc0acc74a34bc2ebb48"
         },
