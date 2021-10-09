@@ -43,7 +43,7 @@ The following image shows the web application's appearance and functionality:
 * CDNjs: https://cdnjs.cloudflare.com/
 
 ### Live View Page: [Click Here!](https://patricktheodore.github.io/football-highlights-dashboard/)
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 - - -
 © 2021 Project 1 - Group 2(Patrick & Adam): Football Highlights Dashboard 
 
