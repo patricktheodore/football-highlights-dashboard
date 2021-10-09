@@ -235,7 +235,21 @@ footer a:hover,
 
     .league-table-container {
         width: 80%;
-    }    
+    }
+    
+    .gamesPlayedCol, 
+    .goalDifCol {
+        display: none;
+    }
+
+    .league-pos,
+    .league-icon,
+    .posCol,
+    .iconCol {
+        width: 0.1rem;
+        padding: 0;
+        margin: 0;
+    }
 }
 
 @media screen and (max-width:600px) {
@@ -254,20 +268,4 @@ footer a:hover,
     .league-table-container {
         width: 100%;
     }    
-}
-
-@media screen and (max-width:900px) {
-    .gamesPlayedCol, 
-    .goalDifCol {
-        display: none;
-    }
-
-    .league-pos,
-    .league-icon,
-    .posCol,
-    .iconCol {
-        width: 0.1rem;
-        padding: 0;
-        margin: 0;
-    }
 }

@@ -120,11 +120,11 @@ footer a:hover,
 
 @media screen and (max-width:640px) {
     #team-select {
-        width: 80%;
+        width: 100%;
     }
 
     #team-select-btn {
-        width: 50%;
+        width: 100%;
     }
     
 }
